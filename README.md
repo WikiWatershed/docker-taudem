@@ -6,11 +6,11 @@
 
 A Docker image for [TauDEM](http://hydrology.usu.edu/taudem/taudem5/index.html).
 
-##### Getting started
+### Getting started
 * Run `./scripts/update.sh`
 * Run `./scripts/console.sh`
 
-##### Deployments
+### Deployments
 
 ``` bash
 $ git flow release start 0.1.0
