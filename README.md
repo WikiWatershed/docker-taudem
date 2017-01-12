@@ -6,6 +6,12 @@
 
 A Docker image for [TauDEM](http://hydrology.usu.edu/taudem/taudem5/index.html).
 
+### Quick Start
+
+```
+docker run --rm -ti quay.io/wikiwatershed/taudem
+```
+
 ### Getting started
 * Run `./scripts/update.sh`
 * Run `./scripts/console.sh`
