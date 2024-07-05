@@ -19,3 +19,7 @@ jobs:
             - name: Build image
               run: |
                 ./scripts/update.sh
+
+            - name: Run TauDEM to ensure it works
+              run: |
+                ./scripts/console.sh /opt/taudem/gagewatershed
