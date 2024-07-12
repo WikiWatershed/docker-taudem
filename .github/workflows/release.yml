@@ -2,7 +2,7 @@ name: release
 
 on:
   push:
-    branches: [ tt/5/switch-to-ghcr ]
+    tags: "*"
 
 env:
   REGISTRY: ghcr.io
