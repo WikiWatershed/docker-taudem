@@ -6,7 +6,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: taudem
+  IMAGE_NAME: WikiWatershed/taudem
 
 jobs:
   release:
