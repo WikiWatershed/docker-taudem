@@ -1,4 +1,5 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
+LABEL org.opencontainers.image.source="https://github.com/WikiWatershed/docker-taudem"
 
 MAINTAINER Azavea <systems@azavea.com>
 
@@ -19,7 +20,7 @@ RUN apt-get update && apt-get install -y \
     libgeos-dev \
     libproj-dev \
     libspatialite-dev \
-    libspatialite5 \
+    libspatialite7 \
     spatialite-bin \
     libibnetdisc-dev \
     wget
@@ -49,4 +50,4 @@ RUN wget -qO- https://github.com/dtarb/TauDEM/archive/v${TAUDEM_VERSION}.tar.gz 
 RUN ln -s /usr/src/TauDEM-${TAUDEM_VERSION} /opt/taudem
 ENV PATH /opt/taudem:$PATH
 
-RUN pip install --upgrade pip
+RUN pip install --upgrade "pip<21"

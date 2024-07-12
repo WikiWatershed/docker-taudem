@@ -1,0 +1,25 @@
+name: ci
+
+on:
+    push:
+      branches: [ develop ]
+    pull_request:
+      branches: [ develop ]
+
+jobs:
+    docker:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repo
+              uses: actions/checkout@v4
+
+            - name: Setup Docker Buildx
+              uses: docker/setup-buildx-action@v3
+
+            - name: Build image
+              run: |
+                ./scripts/update.sh
+
+            - name: Run TauDEM to ensure it works
+              run: |
+                ./scripts/console.sh /opt/taudem/gagewatershed
