@@ -1,4 +1,5 @@
 FROM ubuntu:16.04
+LABEL org.opencontainers.image.source="https://github.com/WikiWatershed/docker-taudem"
 
 MAINTAINER Azavea <systems@azavea.com>
 
